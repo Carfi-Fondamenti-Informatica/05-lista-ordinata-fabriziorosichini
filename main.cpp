@@ -7,7 +7,7 @@ int main() {
     }
     int a = 0;
     cin >> a;
-    
+
     /* copio la lista in ingresso*/
     int copy[10];
     for (int i = 0; i < 10; i++) {
@@ -32,13 +32,14 @@ int main() {
             lista[i] = copy[i - 1];
             i++;
         }
-        /* se invece a>lista [i] ma a non è nella lista, l'i-esimo numero assume il valore di a, mentre sfruttano un
-         * indice j, quelli successivi prendono il valore dell'indice precedente dalla lista copy*/
+        /* se invece a>lista [i] ma a non è nella lista, l'i-esimo numero assume il valore di a,
+         * quelli successivi prendono il valore dell'indice precedente dalla lista copy*/
     } else {
         lista[i] = a;
         i++;
-        for (int j = i; j < 10; j++) {
-            lista[j] = copy[j - 1];
+        while (i<10) {
+            lista[i] = copy[i - 1];
+            i++;
         }
     }
 
