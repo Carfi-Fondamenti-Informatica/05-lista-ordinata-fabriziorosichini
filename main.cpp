@@ -14,7 +14,7 @@ int main() {
     }
     int i = 0;
 
-    while (lista[i] <= a) {
+    while (lista[i] < a) {
         lista[i] = copy[i];
         i++;
     }
@@ -29,7 +29,7 @@ int main() {
             i++;
         }
        
-    } else {
+    } else if(lista[i]>a){
         lista[i] = a;
         i++;
         while (i<10) {
